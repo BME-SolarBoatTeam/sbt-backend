@@ -10,9 +10,6 @@ async function main() {
   // Insert roles
   const roles = ["admin", "writer"];
   for (const role of roles) {
-    const roleExist = await prisma.role.findUnique({ where: { name: role } });
-    if (roleExist) continue;
-
     await prisma.role.upsert({
       where: { name: role },
       update: {},
@@ -70,7 +67,7 @@ async function main() {
     },
   });
 
-  console.log("\nAdmin user seeded successfully\n\nUsername: admin@test.hu\nPassword: admin\n");
+  console.log("\nAdmin user seeded successfully\n\nUsername: admin@test.hu\nPassword: [SEE ENV] \n");
 
   // create template posts
   const createPost = await prisma.post.create({

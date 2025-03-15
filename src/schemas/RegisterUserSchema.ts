@@ -10,7 +10,7 @@ const RegisterUserSchema = z.object({
 
     // RegEx: https://github.com/RedBit-devs/RedBit/wiki/API
     .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/, {
-      message: "A jelszó nem megfelelő! Tartalmaznia kell kis- és nagybetűt, számot és speciális karaktert! ",
+      message: "A jelszó nem megfelelő! Tartalmaznia kell kis- és nagybetűt, számot és speciális karaktert!",
     }),
   role: z.string({ required_error: "Szerepkör kötelező!" }).min(1),
 });

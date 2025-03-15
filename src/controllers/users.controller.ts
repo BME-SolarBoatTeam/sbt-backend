@@ -41,7 +41,7 @@ const getAllUsers = async (req: Request, res: Response): Promise<any> => {
 const register = async (req: Request, res: Response): Promise<any> => {
   const { role } = (req as any).user;
   if (role !== "admin") return res.status(403).json({ message: "Forbidden" });
-  if (!req.file) return res.status(400).json({ message: "Avatar is required!" });
+  if (!req.file) return res.status(400).json({ message: "Kötelező egy profilképet feltölteni!" });
 
   try {
     const body = req.body;
