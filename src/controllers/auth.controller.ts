@@ -73,7 +73,7 @@ const login = async (req: Request, res: Response): Promise<any> => {
 
     return res
       .status(200)
-      .json({ message: `Sikeres bejelentkezés mint: ${user.firstName} ${user.lastName}!`, redirect: "/" });
+      .json({ message: `Sikeres bejelentkezés mint: ${user.lastName} ${user.firstName}!`, redirect: "/" });
   }
 
   return res.status(401).json({ message: "Helytelen jelszó vagy email!" });

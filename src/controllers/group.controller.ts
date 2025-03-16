@@ -274,7 +274,7 @@ const removeUserFromGroup = async (req: Request, res: Response): Promise<any> =>
       });
 
       if (!response) return res.status(404).json({ message: "Sikertelen törlés!" });
-      return res.status(200).json({ message: `${firstName} ${lastName} törölve lett ${group} csoportból!` });
+      return res.status(200).json({ message: `${lastName} ${firstName} törölve lett ${group} csoportból!` });
     } catch (error) {
       return res.status(500).json({ message: "Internal server error" });
     }
@@ -296,7 +296,7 @@ const removeUserFromGroup = async (req: Request, res: Response): Promise<any> =>
       });
 
       if (!response) return res.status(404).json({ message: "Sikertelen törlés!" });
-      return res.status(200).json({ message: `${firstName} ${lastName} törölve lett ${group} csoportból!` });
+      return res.status(200).json({ message: `${lastName} ${firstName} törölve lett ${group} csoportból!` });
     } catch (error) {
       return res.status(500).json({ message: "Internal server error" });
     }
