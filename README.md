@@ -1,4 +1,4 @@
-# BME SolarBoatTeam - Backend
+# BME Solar Boat Team - Backend
 
 _This is an exam project for a small group of students._<br />
 
